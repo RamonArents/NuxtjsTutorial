@@ -1,8 +1,6 @@
 <template>
   <div>
-    <p>{{ product.title }}</p>
-    <p>{{ product.price }}</p>
-    <p>{{ product.id }}</p>
+    <ProductDetail :product="product" />
   </div>
 </template>
 
@@ -15,7 +13,7 @@ const { data: product } = await useFetch(uri, {key:id});
 
 definePageMeta({
     layout:'products'
-})
+});
 </script>
 
 <style scoped></style>
