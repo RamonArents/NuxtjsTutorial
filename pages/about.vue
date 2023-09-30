@@ -11,10 +11,13 @@
       Aliquid accusantium error, mollitia quos harum sint tempore illo
       cupiditate.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  const { data } = await useFetch('/api/currency/GBP');
+</script>
 
 <style scoped>
 h2 {
